@@ -20,5 +20,11 @@ namespace DesignPatterns
             Console.WriteLine($"Object one environment : {obj.Environment}");
             Console.WriteLine($"Object two environment : {obj2.Environment}");
         }
+
+        internal void FactoryDemo()
+        {
+            KnifeFactory factory = new KnifeFactory();
+            Knife chefKnif =  factory.OrderKnife("chef");
+        }
     }
 }

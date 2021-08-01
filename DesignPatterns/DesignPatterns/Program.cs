@@ -8,8 +8,7 @@ namespace DesignPatterns
         {
             Demo demo = new Demo();
             demo.Singleton();
-            
-            
+            demo.FactoryDemo();
         }
     }
 }
