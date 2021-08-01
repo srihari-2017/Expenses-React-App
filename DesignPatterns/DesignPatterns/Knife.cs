@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    abstract class Knife
+    public abstract class Knife
     {
         internal void Sharpen()
         {

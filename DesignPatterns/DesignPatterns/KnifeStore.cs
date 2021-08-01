@@ -2,25 +2,22 @@
 
 namespace DesignPatterns
 {
-    internal class KnifeStore
-    {
-        //require a knife factory object to be passed to this constructor
-        private KnifeFactory factory;
-
-        public KnifeStore(KnifeFactory factory)
+    public abstract class KnifeStore
+    { 
+        public Knife OrderKnife(string knifeType)
         {
-            this.factory = factory;
-        }
-
-        internal Knife OrderKnife(string knifeType)
-        {
+            Knife knife;
+            
             //use the create method in the factory
-            Knife knife = factory.CreateKnife(knifeType);
+            knife = CreateKnife(knifeType);
+            
             //Prepare the Knife
             knife.Sharpen();
             knife.Polish();
             knife.Package();
             return knife;
         }
+
+        public abstract Knife CreateKnife(String knifeType);
     }
 }
