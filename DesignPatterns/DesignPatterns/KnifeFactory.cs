@@ -4,16 +4,16 @@ namespace DesignPatterns
 {
     internal class KnifeFactory
     {
-        internal Knife OrderKnife(string knifeType)
+        public Knife CreateKnife(String knifeType)
         {
             Knife knife = null;
 
             // Create Knife Object - Concrete instantiation     
-            if(knifeType == "chef")
+            if (knifeType == "chef")
             {
                 knife = new ChefKnife();
             }
-            else if(knifeType == "steak")
+            else if (knifeType == "steak")
             {
                 knife = new SteakKnif();
             }
@@ -26,12 +26,8 @@ namespace DesignPatterns
                 knife = new ParingKnif();
             }
 
-            //Prepare the Knife
-            knife.Sharpen();
-            knife.Polish();
-            knife.Package();
             return knife;
-            
         }
+        
     }
 }

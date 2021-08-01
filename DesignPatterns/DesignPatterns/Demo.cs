@@ -24,6 +24,7 @@ namespace DesignPatterns
         internal void FactoryDemo()
         {
             KnifeFactory factory = new KnifeFactory();
+            KnifeStore knifeStore = new KnifeStore(factory);
             Knife chefKnif =  factory.OrderKnife("chef");
         }
     }
