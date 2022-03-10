@@ -1,1 +1,1 @@
-# This contains different projects
+# Expense Application To track daily expenses
