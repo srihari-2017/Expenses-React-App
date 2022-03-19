@@ -2,8 +2,6 @@ import React from "react";
 import ExpenseForm from "./ExpenseForm";
 import './NewExpense.css';
 
-
-
 const NewExpense = (props) => {
 
     const CreateNewExpense = (newExpense) => 
@@ -15,9 +13,14 @@ const NewExpense = (props) => {
         };
         props.onAddExpense(expenseData);
     }
+
+    const CloseForm = () =>
+    {
+        props.onCancel();
+    }
     
     return <div className="new-expense">
-        <ExpenseForm onSubmitExpense={CreateNewExpense}/>
+        <ExpenseForm onSubmitExpense={CreateNewExpense} onCancel={CloseForm}/>
     </div>
 }
 
